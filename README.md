@@ -5,7 +5,8 @@ Parser css custom properties into JS object.
 
 ```javascript
 const CSSParser = require('css-customproperties-parser'),
-	CSS_FILE_PATH = '/path/from/root/filename.css';
+	path = require('path'),
+	CSS_FILE_PATH = path.resolve(__dirname, '/relative/path/to/filename.css');
 
 const CSSobject = CSSParser.toJs(CSS_FILE_PATH);
 console.log(CSSobject); // this is result object

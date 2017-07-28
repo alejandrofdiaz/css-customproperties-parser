@@ -3,7 +3,7 @@ const fs = require('fs'),
 
 const REGEX_CURLY = /[^{\}]+(?=})/g;
 
-const getCSSFile = pathToCSS => fs.readFileSync(path.resolve(__dirname, pathToCSS), 'utf8');
+const getCSSFile = pathToCSS => fs.readFileSync(pathToCSS, 'utf8');
 const toJS = pathToCSS =>
 	getCSSFile(pathToCSS)
 		.replace(/(\r\n|\n|\r|\t| )/gm, '')

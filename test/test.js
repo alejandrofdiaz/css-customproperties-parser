@@ -1,3 +1,4 @@
 const CSSParser = require('../index'),
-	FILE_PATH = './test/variables.css';
-	console.log(CSSParser.toJS(FILE_PATH));
+	path = require('path'),
+	FILE_PATH = path.resolve(__dirname, 'variables.css');
+console.log(CSSParser.toJS(FILE_PATH));
