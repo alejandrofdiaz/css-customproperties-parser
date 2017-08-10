@@ -6,7 +6,7 @@ const REGEX_CURLY = /[^{\}]+(?=})/g;
 const getCSSFile = pathToCSS => fs.readFileSync(pathToCSS, 'utf8');
 const toJS = pathToCSS =>
 	getCSSFile(pathToCSS)
-		.replace(/(\r\n|\n|\r|\t| )/gm, '')
+		.replace(/(\r\n|\n|\r|\t)/gm, '')
 		.match(REGEX_CURLY)
 		.reduce((acum, value) => {
 			return acum + value
